@@ -11,7 +11,7 @@ sucessocertoApp.controller('mainController', ['$scope', function mainController(
     
     // HOME
     $scope.home       = {};
-    $scope.home.title = "Comece a vender com segurança";
+    $scope.home.title = "Você tem a ideia? Nós te ajudamos com a execução!";
     $scope.home.btn   = "Descubra como";
     
     // ABOUT
@@ -34,9 +34,9 @@ sucessocertoApp.controller('mainController', ['$scope', function mainController(
     // EVENTS
     $scope.events          = {};
     $scope.events.title    = "Participe de nosso Webinar!";
-    $scope.events.subtitle = "Como criar um negócio e alavancar as vendas em período de crise";
+    $scope.events.subtitle = "";
     $scope.events.desc     = "";
-    $scope.events.btn      = "Venha conferir nosso evento! (em breve)";
+    $scope.events.btn      = "Confira!";
 
     // BLOG
     $scope.blog           = {};
@@ -47,7 +47,9 @@ sucessocertoApp.controller('mainController', ['$scope', function mainController(
     $scope.blog.btn       = "Continue lendo (em breve)";
 
     // CONTACT
-    $scope.contact       = {};
-    $scope.contact.title = "Vamos Interagir!";
+    $scope.contact          = {};
+    $scope.contact.title    = "Fale conosco";
+    $scope.contact.email    = "contato@sucessocerto.net";
+    $scope.contact.facebook = "https://facebook.com/sucessocertobr";
 
 }]);

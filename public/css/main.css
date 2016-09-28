@@ -29,6 +29,13 @@ a:hover,
 a:focus {
   color: #2293cf;
 }
+a.default {
+  color: white;
+}
+a.default:hover,
+a.default:focus {
+  color: #e6e6e6;
+}
 h1,
 h2,
 h3,
