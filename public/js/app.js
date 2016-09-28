@@ -18,7 +18,7 @@ sucessocertoApp.controller('mainController', ['$scope', function mainController(
     $scope.about = {};
     $scope.about.title          = "Veja só como podemos te ajudar a começar o seu negócio";
     $scope.about.items          = [];
-    $scope.about.items[0]        = {};
+    $scope.about.items[0]       = {};
     $scope.about.items[0].title = "Voe sem medo";
     $scope.about.items[0].desc  = "Mostramos a você como iniciar um novo negócio e como alavancar suas vendas sem mistério";
     $scope.about.items[0].icon  = "fa-paper-plane";
@@ -35,13 +35,16 @@ sucessocertoApp.controller('mainController', ['$scope', function mainController(
     $scope.events          = {};
     $scope.events.title    = "Participe de nosso Webinar!";
     $scope.events.subtitle = "Como criar um negócio e alavancar as vendas em período de crise";
-    $scope.events.desc     = "Participe de nosso Webinar!";
+    $scope.events.desc     = "";
+    $scope.events.btn      = "Venha conferir nosso evento! (em breve)";
 
     // BLOG
-    $scope.blog       = {};
-    $scope.blog.title = "BlogPost do dia";
-    $scope.blog.desc  = "Como estabelecer metas para aumentar as vendas";
-    $scope.blog.btn   = "Continue lendo";
+    $scope.blog           = {};
+    $scope.blog.title     = "BlogPost do dia";
+    $scope.blog.subtitle  = "Como estabelecer metas para aumentar as vendas";
+    $scope.blog.desc      = "Existe muito material na internet prometendo aumentar as suas vendas. Mas a verdade é uma só," +
+        "para vender mais é necessário Estratégia e Ação.";
+    $scope.blog.btn       = "Continue lendo (em breve)";
 
     // CONTACT
     $scope.contact       = {};
