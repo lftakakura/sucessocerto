@@ -33,7 +33,7 @@ sucessocertoApp.controller('mainController', ['$scope', function mainController(
 
     // EVENTS
     $scope.events          = {};
-    $scope.events.title    = "Participe de nosso Webinar!";
+    $scope.events.title    = "Gostou? Então participe de nosso Webinar!";
     $scope.events.subtitle = "";
     $scope.events.desc     = "";
     $scope.events.btn      = "Confira!";
