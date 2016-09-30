@@ -36,6 +36,9 @@ a.default:hover,
 a.default:focus {
   color: #e6e6e6;
 }
+i.positive {
+  color: #5ab946 !important;
+}
 h1,
 h2,
 h3,

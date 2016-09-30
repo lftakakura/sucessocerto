@@ -46,6 +46,7 @@
 
         <!-- Plugin CSS -->
         <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="node_modules/angular-toastr/dist/angular-toastr.min.css" />
 
         <!-- Theme CSS -->
         <link href="css/main.min.css" rel="stylesheet">
@@ -78,10 +79,10 @@
                     <a class="page-scroll" href="#about">Sobre</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#events">Eventos</a>
+                    <a class="page-scroll" href="#services">Serviços</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#blog">Blog</a>
+                    <a class="page-scroll" href="#pricing">Preços</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#contact">Contato</a>
@@ -99,115 +100,190 @@
             <div style="margin-bottom: 5%">
                 <i class="fa fa-xl fa-thumbs-up sr-icons"></i>
             </div>
-            <h1 id="homeHeading">{{home.title}}</h1>
-            <hr>
-            <!--<p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>-->
+            <h1 id="homeHeading">Consultoria</h1>
+            <h1 style="font-size: 35px">para empreendedores da era</h1>
+            <h1 id="homeHeading">Digital</h1>
+            <hr class="light">
             <a href="#about" class="btn btn-primary btn-xl page-scroll">{{home.btn}}</a>
         </div>
     </div>
 </header>
 
-<section id="about">
+<section class="bg-secondary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">{{about.title}}</h2>
+                <hr class="primary">
+                <h3 class="text-muted">
+                    Orientada a resultados!<br><br>
+
+                    Baseada nos 3 pontos cruciais para o seu e-commerce voltar a crescer: <br><br>
+                </h3>
+
+                <div class="col-lg-12 text-left" style="margin-left: 20%; margin-bottom: 30px">
+                    <h3 class="text-muted">
+                        1) atualização do plano de negócio
+                    </h3>
+                    <h3 class="text-muted">
+                        2) monitoramento de processos
+                    </h3>
+                    <h3 class="text-muted">
+                        3) métricas de resultados
+                    </h3>
+                </div>
+
+                <p class="text-muted">A Sucesso Certo oferece a Master Consultoria em pacotes e preços diversos, para maior conforto e eficiência dos nossos clientes.
+                    Um deles tem a sua medida! <br><br>
+
+                    Veja o que você receberá: auxílio para a melhoria dos processos de gestão digital, retenção e aquisição de clientes, fundamentos práticos de marketing digital, sessão tira-dúvidas e mais.
+                    <br><br>
+
+                    Nossa assessoria é "mãos na massa": aplique hoje mesmo as dicas do consultor e comece a ver os resultados.</p>
+
+                <hr class="primary">
+                <a href="#services" class="btn btn-primary btn-xl page-scroll">{{about.btn}}</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" style="padding-top: 50px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">{{about.title}}</h2>
+                <h2 class="section-heading">{{services.title}}</h2>
                 <hr class="primary">
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-6 text-center">
+            <div class="col-lg-4  text-center">
                 <div class="service-box">
-                    <i class="fa fa-paper-plane fa-4x text-primary sr-button"></i>
-                    <h3>{{about.items[0].title}}</h3>
-                    <p class="text-muted">{{about.items[0].desc}}</p>
+                    <i class="fa fa-line-chart fa-4x text-primary sr-icons"></i>
+                    <h3>{{services.items[0].title}}</h3>
+                    <p class="text-muted">{{services.items[0].desc}}</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 text-center">
+            <div class="col-lg-4  text-center">
                 <div class="service-box">
-                    <i class="fa fa-flag-o fa-4x text-primary sr-button"></i>
-                    <h3>{{about.items[1].title}}</h3>
-                    <p class="text-muted">{{about.items[1].desc}}</p>
+                    <i class="fa fa-pie-chart fa-4x text-primary sr-icons"></i>
+                    <h3>{{services.items[1].title}}</h3>
+                    <p class="text-muted">{{services.items[1].desc}}</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 text-center">
+            <div class="col-lg-4  text-center">
                 <div class="service-box">
-                    <i class="fa fa-comment fa-4x text-primary sr-button"></i>
-                    <h3>{{about.items[2].title}}</h3>
-                    <p class="text-muted">{{about.items[2].desc}}</p>
+                    <i class="fa fa-wrench fa-4x text-primary sr-icons"></i>
+                    <h3>{{services.items[2].title}}</h3>
+                    <p class="text-muted">{{services.items[2].desc}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4  text-center">
+                <div class="service-box">
+                    <i class="fa fa-rocket fa-4x text-primary sr-icons"></i>
+                    <h3>{{services.items[3].title}}</h3>
+                    <p class="text-muted">{{services.items[3].desc}}</p>
+                </div>
+            </div>
+            <div class="col-lg-4  text-center">
+                <div class="service-box">
+                    <i class="fa fa-users fa-4x text-primary sr-services"></i>
+                    <h3>{{services.items[4].title}}</h3>
+                    <p class="text-muted">{{services.items[4].desc}}</p>
+                </div>
+            </div>
+            <div class="col-lg-4  text-center">
+                <div class="service-box">
+                    <i class="fa fa-bar-chart fa-4x text-primary sr-services"></i>
+                    <h3>{{services.items[5].title}}</h3>
+                    <p class="text-muted">{{services.items[5].desc}}</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="bg-primary" id="events">
+<section id="pricing" style="padding-top: 50px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">{{events.title}}</h2>
+                <i class="fa fa-money fa-4x text-primary sr-icons"></i>
+                <br><br>
+                <h2 class="section-heading">{{pricing.title}}</h2>
+                <hr class="primary">
+                <h3 class="text-muted">{{pricing.subtitle}}</h3>
                 <hr class="light">
-                <img src="img/speecher.jpg" alt="" class="page-scroll sr-button">
-                <h3 class="text-faded">Como criar um negócio e alavancar as vendas em período de crise por Caio Vidal</h3>
-                <br><br>
-                <a target="_blank" href="https://www.sympla.com.br/como-criar-um-negocio-e-alavancar-as-vendas-em-periodo-de-crise__92003" class="page-scroll btn btn-primary btn-xl sr-button">{{events.btn}}</a>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 text-center">
                 <div class="service-box">
-                    <i class="fa fa-volume-up fa-4x text-default sr-button"></i>
-                    <h3><a class="default" target="_blank" href="https://br.linkedin.com/in/caiovidalsoares">Caio Vidal</a></h3>
-                    <p class="text-faded">Caio Vidal Soares é um Business Developer.</p>
-                    <br>
-                    <p class="text-faded">Há 8 anos desenvolve inteligência de mercado, prospecção e vendas, com passagem por agências digitais.</p>
-                    <br>
-                    <p class="text-faded">Empreendedor serial, formado em Marketing pela Universidade Anhembi Morumbi, abriu seu primeiro negócio em 2012,
-                        voltado para o mercado fitness, após o qual co-fundaria a Mania Make, loja virtual de produtos de cosmético e maquiagem.</p>
-                    <br>
-                    <p class="text-faded">Curte skate, corridas de rua e seriados como Game Of Thrones e Suits.</p>
-                    <br><br>
-                    <a href="https://br.linkedin.com/in/caiovidalsoares" target="_blank" class="page-scroll btn btn-default btn-xl sr-button"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+                    <h3>Simples</h3>
+                    <ul class="list-group text-left">
+                        <li class="list-group-item">Análise completa de sua página <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto Trends</li>
+                        <li class="list-group-item">SucessoCerto Analytics</li>
+                        <li class="list-group-item">SucessoCerto Master Tools</li>
+                        <li class="list-group-item">SucessoCerto Page Boost</li>
+                        <li class="list-group-item">SucessoCerto E-mail Marketing</li>
+                        <li class="list-group-item">SucessoCerto Consulting</li>
+                    </ul>
+                    <h2>R$ 49,90</h2>
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-video-camera fa-4x text-default sr-button"></i>
-                    <h3>Sobre o Evento</h3>
-                    <p class="text-faded">Todo empreendedor sabe que, mais cedo ou mais tarde, precisará formalizar seu negócio.</p>
-                    <br>
-                    <p class="text-faded">Isso significa se enquadrar em impostos dos quais nunca ouviu falar, autorizações de diversas entidades,
-                        muita papelada e burocracia.</p>
-                    <br>
-                    <p class="text-faded">Para te ajudar nessa jornada, a Sucesso Certo está trazendo uma oportunidade
-                        única: convidamos um especialista em impulsionar negócios para contar os segredos da boa gestão a empreendedores
-                        que estão lutando contra a crise.</p>
-                    <br>
-                    <p class="text-faded">Na próxima terça-feira (04/10), a partir das 21h, nosso expert tirará suas dúvidas neste webinar exclusivo!</p>
-                    <br>
-                    <p class="text-faded">Garanta seu lugar, atraia muito mais clientes e cresça para o sucesso!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <i class="fa fa-wordpress fa-4x text-primary sr-button"></i>
-                <br><br>
-                <h2 class="section-heading">{{blog.title}}</h2>
                 <hr class="primary">
-                <h3 class="text-muted">{{blog.subtitle}}</h3>
-                <p class="text-muted">{{blog.desc}}</p>
-                <br>
-                <a href="#" class="page-scroll btn btn-primary btn-xl sr-button disabled">{{blog.btn}}</a>
+            </div>
+            <div class="col-lg-6 col-md-6 text-center">
+                <div class="service-box">
+                    <h3>Silver</h3>
+                    <ul class="list-group text-left">
+                        <li class="list-group-item">Análise completa de sua página <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto Trends <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto Analytics <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto Master Tools <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto Page Boost</li>
+                        <li class="list-group-item">SucessoCerto E-mail Marketing</li>
+                        <li class="list-group-item">SucessoCerto Consulting</li>
+                    </ul>
+                    <h2>R$ 99,90</h2>
+                </div>
+                <hr class="primary">
+            </div>
+            <div class="col-lg-6 col-md-6 text-center">
+                <div class="service-box">
+                    <h3>Gold <span class="badge bg-primary">Recomendado</span></h3>
+                    <ul class="list-group text-left">
+                        <li class="list-group-item">Análise completa de sua página <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto Trends</li>
+                        <li class="list-group-item">SucessoCerto Analytics</li>
+                        <li class="list-group-item">SucessoCerto Master Tools</li>
+                        <li class="list-group-item">SucessoCerto Page Boost <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto E-mail Marketing <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item"><strong class="text-primary">SucessoCerto Consulting</strong> <i class="fa fa-check positive pull-right"></i></li>
+                    </ul>
+                    <h2>R$ 159,90</h2>
+                </div>
+                <hr class="primary">
+            </div>
+            <div class="col-lg-6 col-md-6 text-center">
+                <div class="service-box">
+                    <h3>Platinum</h3>
+                    <ul class="list-group text-left">
+                        <li class="list-group-item">Análise completa de sua página <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto Trends <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto Analytics <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto Master Tools <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto Page Boost <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item">SucessoCerto E-mail Marketing <i class="fa fa-check positive pull-right"></i></li>
+                        <li class="list-group-item"><strong class="text-primary">SucessoCerto Consulting</strong> <i class="fa fa-check positive pull-right"></i></li>
+                    </ul>
+                    <h2>de <t style="text-decoration: line-through">R$ 259,90</t> por R$ 199,90</h2>
+                    <p>* Promoção válida até as 23h59 de sábado (31/10)</p>
+                </div>
+                <hr class="primary">
             </div>
         </div>
     </div>
@@ -219,7 +295,26 @@
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading">{{contact.title}}</h2>
                 <hr class="light">
-                <p></p>
+                <h3 class="text-faded">{{contact.subtitle}}</h3>
+            </div>
+            <div class="col-lg-8 col-lg-offset-2 text-center" style="margin-top: 30px">
+                <div class="form-group row">
+                    <div class="col-xs-12 text-center">
+                        <input required class="form-control" type="text" ng-model="name" id="example-text-input" placeholder="Nome">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-xs-12">
+                        <input required class="form-control" type="email" ng-model="email" id="example-text-input" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-xs-12">
+                        <input required class="form-control" type="text" ng-model="phone" id="example-text-input" placeholder="Telefone" ui-br-phone-number>
+                    </div>
+                </div>
+                <a ng-click="submit()" class="btn btn-default btn-xl" style="margin-top: 15px">Enviar</a>
+                <hr class="light">
             </div>
             <div class="col-lg-4 col-lg-offset-2 text-center">
                 <a class="default" target="_blank" href="http://facebook.com/sucessocertobr"><i class="fa fa-facebook fa-3x sr-contact"></i></a>
@@ -245,16 +340,23 @@
 
 <!-- Angular -->
 <script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/angular/"></script>
+<script src="vendor/angular/angular-animate.js"></script>
 
 <!-- Plugin JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
 <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="node_modules/angular-input-masks/releases/angular-input-masks-standalone.min.js"></script>
+<script type="text/javascript" src="node_modules/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
 
 <!-- Theme JavaScript -->
 <script src="js/main.min.js"></script>
 <!-- App JavaScript -->
 <script src="js/app.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
 
 </body>
 

@@ -25,5 +25,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lftakakura/sucessocerto"
+  },
+  "dependencies": {
+    "angular-input-masks": "^2.4.0"
   }
 }
